@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dana_app/widgets/gap.dart';
-import '../utils/assets_locations.dart';
-import 'widgets.dart';
+import '../../utils/utils.dart';
+import '../widgets.dart';
 
 class AppBarTitleWidget extends StatelessWidget {
   const AppBarTitleWidget({super.key});

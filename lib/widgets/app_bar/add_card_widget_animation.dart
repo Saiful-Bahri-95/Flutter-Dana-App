@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utils/assets_locations.dart';
+import '../../utils/utils.dart';
 
 class AddCardWidgetAnimation extends StatefulWidget {
   const AddCardWidgetAnimation({super.key});
