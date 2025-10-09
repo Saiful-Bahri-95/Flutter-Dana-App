@@ -7,3 +7,6 @@ export 'service_card/service_card_widget.dart';
 export 'service_card/service_card_icon.dart';
 export 'feed_card/feed_card_widget.dart';
 export 'feed_card/tile_with_animation.dart';
+export 'feed_card/friend_feed_list1.dart';
+export 'feed_card/friend_feed_list2.dart';
+export 'feed_card/friend_feed_list3.dart';

@@ -4,7 +4,9 @@ import 'package:simple_animations/animation_builder/loop_animation_builder.dart'
 import '../../utils/utils.dart';
 
 class TileWithAnimation extends StatelessWidget {
-  const TileWithAnimation({super.key});
+  const TileWithAnimation({super.key, required this.iconName});
+
+  final String iconName;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class TileWithAnimation extends StatelessWidget {
       curve: Curves.easeOutQuint,
       child: Padding(
         padding: const EdgeInsets.all(2.0),
-        child: Image(image: AssetsLocations.iconLocation('friend_1')),
+        child: Image(image: AssetsLocations.iconLocation(iconName)),
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/utils.dart';
@@ -11,7 +12,11 @@ class FeedCardWidget extends StatefulWidget {
 }
 
 class _FeedCardWidgetState extends State<FeedCardWidget> {
-  List<Widget> friendsFeedList = [];
+  List<Widget> friendsFeedList = [
+    FriendFeedList1(),
+    FriendFeedList2(),
+    FriendFeedList3(),
+  ];
   @override
   Widget build(BuildContext context) {
     final primaryTextTheme = Theme.of(context).primaryTextTheme;
@@ -28,7 +33,7 @@ class _FeedCardWidgetState extends State<FeedCardWidget> {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsetsGeometry.fromLTRB(16, 16, 10, 28),
+            padding: EdgeInsetsGeometry.fromLTRB(16, 16, 10, 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -53,10 +58,23 @@ class _FeedCardWidgetState extends State<FeedCardWidget> {
           ),
           Padding(
             padding: EdgeInsets.only(left: 25, right: 25, bottom: 15),
-            child: Row(
-              children: [
-                TileWithAnimation(),
-              ],
+            child: CarouselSlider.builder(
+              itemCount: friendsFeedList.length,
+              itemBuilder: (context, index, realIndex) =>
+                  friendsFeedList[index],
+              options: CarouselOptions(
+                scrollPhysics: NeverScrollableScrollPhysics(),
+                autoPlay: true,
+                scrollDirection: Axis.vertical,
+                reverse: true,
+                padEnds: true,
+                height: 60,
+                enableInfiniteScroll: true,
+                initialPage: 2,
+                autoPlayCurve: Curves.easeInCirc,
+                viewportFraction: 1,
+                autoPlayInterval: Duration(seconds: 2),
+              ),
             ),
           ),
         ],
