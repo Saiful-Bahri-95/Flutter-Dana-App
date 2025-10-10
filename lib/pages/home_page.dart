@@ -41,6 +41,8 @@ class HomePage extends StatelessWidget {
             ),
           ),
           FeedCardWidget(),
+          ImageLoopSliderWidget(),
+          WhatsNewCardWidget(),
         ],
       ),
     );

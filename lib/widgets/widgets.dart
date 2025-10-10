@@ -10,3 +10,5 @@ export 'feed_card/tile_with_animation.dart';
 export 'feed_card/friend_feed_list1.dart';
 export 'feed_card/friend_feed_list2.dart';
 export 'feed_card/friend_feed_list3.dart';
+export 'image_loop_slider/image_loop_slider_widget.dart';
+export 'whats_new_card/whats_new_card.dart';
