@@ -11,9 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: DanaCloneTheme.whiteBg,
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-        ),
+        systemOverlayStyle: SystemUiOverlayStyle(statusBarColor: Colors.transparent),
         elevation: 0,
         titleSpacing: 0,
         title: AppBarTitleWidget(),
@@ -29,10 +27,7 @@ class HomePage extends StatelessWidget {
             height: 360,
             child: Stack(
               children: [
-                Container(
-                  height: 205,
-                  color: const Color.fromRGBO(17, 142, 234, 1),
-                ),
+                Container(height: 205, color: const Color.fromRGBO(17, 142, 234, 1)),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [HeaderWidget(), ServiceCardWidget()],
@@ -43,6 +38,7 @@ class HomePage extends StatelessWidget {
           FeedCardWidget(),
           ImageLoopSliderWidget(),
           WhatsNewCardWidget(),
+          NearbyCardWidget(),
         ],
       ),
     );

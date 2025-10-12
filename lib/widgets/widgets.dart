@@ -13,3 +13,4 @@ export 'feed_card/friend_feed_list3.dart';
 export 'image_loop_slider/image_loop_slider_widget.dart';
 export 'whats_new_card/whats_new_card.dart';
 export 'whats_new_card/tile_whats_new.dart';
+export 'nearby_card/nearby_card_widget.dart';
