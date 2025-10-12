@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dana_app/widgets/gap.dart';
 
 import '../../utils/utils.dart';
+import '../widgets.dart';
 
 class WhatsNewCardWidget extends StatelessWidget {
   const WhatsNewCardWidget({super.key});
@@ -13,10 +13,7 @@ class WhatsNewCardWidget extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        side: BorderSide(
-          color: DanaCloneTheme.grey.withOpacity(0.4),
-          width: 0.3,
-        ),
+        side: BorderSide(color: DanaCloneTheme.grey.withOpacity(0.4), width: 0.3),
       ),
       margin: EdgeInsets.only(left: 16, right: 16, top: 8),
       child: Column(
@@ -31,9 +28,7 @@ class WhatsNewCardWidget extends StatelessWidget {
                   children: [
                     Text(
                       'What\'s New',
-                      style: primaryTextTheme.headlineMedium?.copyWith(
-                        fontSize: 16,
-                      ),
+                      style: primaryTextTheme.headlineMedium?.copyWith(fontSize: 16),
                     ),
                     Text(
                       'The best news of the day',
@@ -42,16 +37,11 @@ class WhatsNewCardWidget extends StatelessWidget {
                   ],
                 ),
                 OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    padding: EdgeInsets.only(left: 5, right: 5),
-                  ),
+                  style: OutlinedButton.styleFrom(padding: EdgeInsets.only(left: 5, right: 5)),
                   onPressed: () {},
                   child: Row(
                     children: [
-                      Image(
-                        image: AssetsLocations.iconLocation('promos'),
-                        width: 16,
-                      ),
+                      Image(image: AssetsLocations.iconLocation('promos'), width: 16),
                       Text('VIEW PROMO'),
                     ],
                   ),
@@ -59,31 +49,23 @@ class WhatsNewCardWidget extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 35, right: 20, bottom: 25),
-            child: Row(
-              children: [
-                Image(
-                  image: AssetsLocations.iconLocation('handphone'),
-                  width: 32,
-                ),
-                Gap(h: 25),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Pakai DANA di Thailand',
-                      style: textTheme.headlineSmall,
-                    ),
-                    Text(
-                      'Belanja praktis tanpa kartu',
-                      style: textTheme.bodyLarge,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+          TileWhatsNew(
+            iconLocation: 'handphone',
+            headline: 'Pakai DANA di Thailand',
+            bodyText: 'Belanja praktis tanpa kartu',
           ),
+          TileWhatsNew(
+            iconLocation: 'nabung_emas',
+            headline: 'Nabung eMas di DANA',
+            bodyText: 'Mulai dari Rp10.000 setiap hari',
+          ),
+          TileWhatsNew(
+            iconLocation: 'kirim_uang',
+            headline: 'Kirim Uang ke Luar Negeri',
+            bodyText: 'Mudah dan Cepat',
+          ),
+          OutlinedButton(onPressed: () {}, child: Text('VIEW ALL NEWS')),
+          Gap(),
         ],
       ),
     );
