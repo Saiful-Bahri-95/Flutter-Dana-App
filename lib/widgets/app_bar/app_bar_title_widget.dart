@@ -16,7 +16,7 @@ class AppBarTitleWidget extends StatelessWidget {
           Gap(h: 8),
           Text('Rp', style: primaryTextTheme.bodySmall),
           Gap(h: 8),
-          Text('0', style: primaryTextTheme.headlineSmall),
+          Text('11.000.536', style: primaryTextTheme.headlineSmall),
           Gap(),
           SizedBox(height: 30, child: AddCardWidgetAnimation()),
         ],
