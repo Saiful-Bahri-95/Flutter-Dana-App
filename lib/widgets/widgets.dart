@@ -17,3 +17,6 @@ export 'nearby_card/nearby_card_widget.dart';
 export 'more_for_u_card/more_for_u_card_widget.dart';
 export 'dana_protection_card/dana_protection_card_widget.dart';
 export 'dana_protection_card/horizontal_caption_and_icon.dart';
+export 'bottom_nav/bottom_nav_bar.dart';
+export 'bottom_nav/icon_bottom_nav_bar.dart';
+export 'bottom_nav/button_pay.dart';

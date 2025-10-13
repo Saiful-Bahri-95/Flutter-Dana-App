@@ -8,46 +8,31 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: DanaCloneTheme.whiteBg,
-      appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
-          statusBarColor: Colors.transparent,
-        ),
-        elevation: 0,
-        titleSpacing: 0,
-        title: AppBarTitleWidget(),
-        actions: [
-          Image(image: AssetsLocations.iconLocation('message'), width: 27),
-          Gap(h: 16),
-        ],
-      ),
-      body: ListView(
-        children: [
-          Container(
-            color: DanaCloneTheme.whiteBg,
-            height: 360,
-            child: Stack(
-              children: [
-                Container(
-                  height: 205,
-                  color: const Color.fromRGBO(17, 142, 234, 1),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [HeaderWidget(), ServiceCardWidget()],
-                ),
-              ],
-            ),
+    return ListView(
+      children: [
+        Container(
+          color: DanaCloneTheme.whiteBg,
+          height: 360,
+          child: Stack(
+            children: [
+              Container(
+                height: 205,
+                color: const Color.fromRGBO(17, 142, 234, 1),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [HeaderWidget(), ServiceCardWidget()],
+              ),
+            ],
           ),
-          FeedCardWidget(),
-          ImageLoopSliderWidget(),
-          WhatsNewCardWidget(),
-          NearbyCardWidget(),
-          MoreForUCardWidget(),
-          DanaProtectionCardWidget(),
-        ],
-      ),
+        ),
+        FeedCardWidget(),
+        ImageLoopSliderWidget(),
+        WhatsNewCardWidget(),
+        NearbyCardWidget(),
+        MoreForUCardWidget(),
+        DanaProtectionCardWidget(),
+      ],
     );
   }
 }
