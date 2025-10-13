@@ -13,7 +13,10 @@ class NearbyCardWidget extends StatelessWidget {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: DanaCloneTheme.grey.withOpacity(0.4), width: 0.3),
+        side: BorderSide(
+          color: DanaCloneTheme.grey.withOpacity(0.4),
+          width: 0.3,
+        ),
       ),
       margin: EdgeInsets.only(left: 16, right: 16, top: 8),
       child: Padding(
@@ -21,11 +24,17 @@ class NearbyCardWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Nearby', style: primaryTextTheme.headlineMedium?.copyWith(fontSize: 16)),
-            Text('Find DANA merchant in your area', style: textTheme.bodyMedium),
+            Text(
+              'Nearby',
+              style: primaryTextTheme.headlineMedium?.copyWith(fontSize: 16),
+            ),
+            Text(
+              'Find DANA merchant in your area',
+              style: textTheme.bodyMedium,
+            ),
             Gap(),
             Container(
-              padding: EdgeInsets.fromLTRB(30, 40, 30, 30),
+              padding: EdgeInsets.fromLTRB(20, 40, 15, 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: DanaCloneTheme.grey.withOpacity(0.5)),
@@ -50,7 +59,10 @@ class NearbyCardWidget extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Image(image: AssetsLocations.iconLocation('nearby'), width: 60),
+                  Image(
+                    image: AssetsLocations.iconLocation('nearby'),
+                    width: 50,
+                  ),
                 ],
               ),
             ),

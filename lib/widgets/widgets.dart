@@ -14,3 +14,6 @@ export 'image_loop_slider/image_loop_slider_widget.dart';
 export 'whats_new_card/whats_new_card.dart';
 export 'whats_new_card/tile_whats_new.dart';
 export 'nearby_card/nearby_card_widget.dart';
+export 'more_for_u_card/more_for_u_card_widget.dart';
+export 'dana_protection_card/dana_protection_card_widget.dart';
+export 'dana_protection_card/horizontal_caption_and_icon.dart';
